@@ -1,2 +1,1 @@
-# snake-js
-jogo snake em js
+# snake-html-js

@@ -1,0 +1,22 @@
+canvas {
+    border:1px solid #d3d3d3;
+    background-color: #000000;
+}
+body {
+	color: white;
+    background-color: #111111;
+}
+
+#canvas-container {
+    width: 100%;
+    text-align:center;
+ }
+ 
+ canvas {
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 800px;
+}
