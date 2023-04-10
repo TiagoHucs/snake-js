@@ -94,28 +94,28 @@ function updateGameArea() {
 
 	// checa colisoes entre os quadrados da snake (menos vizinhos)
 	for (var i = 0; i < snake.length; i++) {
-		for (var ii = 0; ii < snake.length; ii++) {
-			if (ii !== i && !saoVizinhos(i,ii)) {
-				colidiu = checkColision(snake[i], snake[ii]);
-				console.log('colidiu :' + colidiu );
+		for (var j = 0; j < snake.length; j++) {
+			if (j !== i && !saoVizinhos(i,j)) {
+				colidiu = checkColision(snake[i], snake[j]);
 			}
 		}
 	}
 
 	// checa colisoes entre a cabeça pra crescer
 	if(checkColision(snake[0], comida)){
-		console.log('comeu');
 		cresce();
 		criaComida();
 	}
 
-	if(colidiu){
+ 	if(colidiu){
 		alert('Game over!');
 		restartPosicoes();
 	} else {
 		snake[0].move();
 		snake[0].paint();
 	}
+
+	document.getElementById('score').innerHTML = snake.length;
 	
 }
 
